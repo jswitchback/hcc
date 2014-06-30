@@ -1,0 +1,248 @@
+/**
+ * @file
+ * Form Styling
+ */
+
+input {
+  outline: none;
+  -webkit-appearance: none;
+  border: 1px solid #D1D1D1;
+    border-radius: 6px 6px 6px 6px;
+    line-height: normal;
+	padding: 2px 4px;
+}
+
+/*body.node-type-webform input {
+  width: 100%;
+}
+*/
+input:focus, textarea:focus, select:focus   {
+  -webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+  outline: none;
+	box-shadow: 0 0 5px #CFD8B4;
+  -webkit-box-shadow: 0 0 5px #CFD8B4;
+	border: 1px solid #C2C9AA;
+
+}
+
+
+input#edit-submit, a.green-btn {
+  display: block;
+	border-radius: 12px;
+	text-align: center;
+  line-height: 100%;
+	border: 1px solid #b4bb9d;
+	color: #FFFFFF;
+	box-shadow: 0 0 2px #ffffff inset;
+	font-size: 75%;
+    text-transform: uppercase;
+	background: #c2c9aa; /* Old browsers */
+	background: -moz-linear-gradient(top,  #cfd8b4 0%, #c2c9aa 100%); /* FF3.6+ */	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cfd8b4), color-stop(100%,#c2c9aa)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #cfd8b4 0%,#c2c9aa 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #cfd8b4 0%,#c2c9aa 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #cfd8b4 0%,#c2c9aa 100%); /* IE10+ */	
+	background: linear-gradient(top,  #cfd8b4 0%,#c2c9aa 100%); /* W3C */
+}
+
+input#edit-submit:hover, a.green-btn:hover, a.grey-btn:hover {
+	box-shadow: 0 0 2px #ffffff inset;
+	background:	#cfd8b4;
+	
+}
+
+a.grey-btn:hover {
+	box-shadow: 0 0 2px #ffffff inset;
+	background:	#d8d8d8;
+}
+
+a.grey-btn {
+  display: block;
+  text-align: center;
+	border-radius: 12px;
+  line-height: 100%;
+  border: 1px solid #b3b3b3;
+	color: #FFFFFF;
+	box-shadow: 0 0 2px #ffffff inset;
+	font-size: 75%;
+    text-transform: uppercase;
+	background: #cacaca; /* Old browsers */
+	background: -moz-linear-gradient(top,  #d8d8d8 0%, #cacaca 100%); /* FF3.6+ */	
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#d8d8d8), color-stop(100%,#cacaca)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #d8d8d8 0%,#cacaca 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #d8d8d8 0%,#cacaca 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #d8d8d8 0%,#cacaca 100%); /* IE10+ */	
+	background: linear-gradient(top,  #d8d8d8 0%,#cacaca 100%); /* W3C */
+}
+
+#block-block-3 a.grey-btn, #block-block-3 a.green-btn {
+    padding: 5% 10% 3%;
+}
+
+input#edit-submit {
+    padding: 10px 50px 7px;
+}
+
+textarea {
+  outline: none;
+  border: 1px solid #D1D1D1;
+  padding: 5px;
+}
+
+.form-item { /* Wrapper for a form element (or group of form elements) and its label */
+  margin: 1.5em 0;
+}
+
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error { /* Highlight the form elements that caused a form submission error */
+  border: 1px solid #c00;
+}
+
+.form-item label { /* The label for a form element */
+  display: block;
+  font-weight: bold;
+}
+
+.form-item label.option { /* The label for a radio button or checkbox */
+  display: inline;
+  font-weight: normal;
+}
+
+.form-required { /* The part of the label that indicates a required field */
+  color: #c00;
+}
+
+.form-item .description { /* The descriptive help text (separate from the label) */
+  font-size: 0.85em;
+}
+
+.form-checkboxes .form-item,
+.form-radios .form-item { /* Pack groups of checkboxes and radio buttons closer together */
+  margin: 0; /* Drupal core uses "0.4em 0" */
+}
+
+.form-submit { /* The submit button */
+}
+
+.container-inline div,
+.container-inline label { /* Inline labels and form divs */
+  display: inline;
+}
+
+.tips { /* Tips for Drupal's input formats */
+}
+
+a.button { /* Buttons used by contrib modules like Media */
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/*
+ * Search (search-block-form.tpl.php)
+ */
+
+#block-search-form { /* Wrapper for the search form */
+}
+
+/*
+ * Drupal's default login form block
+ */
+
+#user-login-form {
+  text-align: left; /* LTR */
+}
+
+/*
+ * OpenID
+ *
+ * The default styling for the OpenID login link seems to assume Garland's
+ * styling of list items.
+ */
+
+#user-login-form ul { /* OpenID creates a new ul above the login form's links. */
+  margin-bottom: 0; /* Position OpenID's ul next to the rest of the links. */
+}
+
+html.js #user-login-form li.openid-link,
+#user-login-form li.openid-link { /* The "Log in using OpenID" link. */
+  margin-top: 1.5em;
+  margin-left: -20px; /* LTR */ /* Un-do some of the padding on the ul list. */
+}
+
+#user-login-form li.user-link { /* The "Cancel OpenID login" link. */
+  margin-top: 1.5em;
+}
+
+#user-login ul {
+  margin: 1.5em 0;
+}
+
+/*
+ * Drupal admin tables
+ *
+ * We overrode these styles in normalize.css, but restore them for the admin
+ * section of the site.
+ */
+
+form th {
+  text-align: left; /* LTR */
+  padding-right: 1em; /* LTR */
+  border-bottom: 3px solid #ccc;
+}
+
+form tbody {
+  border-top: 1px solid #ccc;
+}
+
+form tr.even {
+  background-color: #fff;
+}
+
+form table .item-list ul {
+  margin: 0;
+}
+
+.lt-ie8 tr.even th,
+.lt-ie8 tr.even td,
+.lt-ie8 tr.odd th,
+.lt-ie8 tr.odd td {
+  border-bottom: 1px solid #ccc; /* IE doesn't display borders on table rows */
+}
+
+/*
+ * Drupal core wrongly puts this in system.menus.css. Since we override that, add it back.
+ */
+
+td.menu-disabled {
+  background: #ccc;
+}
+/* WEBFORM CONTACT US */
+
+body.node-type-webform .form-item.webform-component, body.node-type-webform .webform-client-form{
+    clear: both;
+    float: left;
+    width: 100%;
+    margin: 0.75em 0;
+}
+
+body.node-type-webform textarea {
+    resize: none;
+}
+
+body.node-type-webform #edit-actions {
+    float: left;
+}
+
+
